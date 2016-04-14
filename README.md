@@ -5,5 +5,6 @@ Run the build
 -------------
 
 ``` bash
-$ node build.js
+$ npm install -g jake
+$ jake
 ```
