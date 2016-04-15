@@ -28,14 +28,11 @@
     desc("Lint JavaScript code");
     task("lint", function () {
         process.stdout.write("Linting JavaScript: ");
-
         jshint.checkFiles({
             files: ["Jakefile.js"],
             options: {},
             globals: {},
         }, complete, fail);
-
-        // jake.exec("node node_modules/jshint/bin/jshint Jakefile.js", { interactive: true }, complete);
     }, { async: true });
 
 }());
