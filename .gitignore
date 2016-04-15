@@ -5,4 +5,4 @@
 .DS_Store
 
 # npm
-node_modules/.bin
+node_modules/**/.bin
