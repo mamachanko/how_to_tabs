@@ -10,6 +10,10 @@
     var karma = require("simplebuild-karma");
 
     var KARMA_CONFIG = "karma.conf.js";
+    var EXPECTED_BROWSERS = [
+        "Firefox 39.0.0 (Mac OS X 10.10.0)",
+        "Chrome 49.0.2623 (Mac OS X 10.10.3)",
+    ];
 
     //**** General purpose tasks
 
@@ -61,6 +65,8 @@
         console.log("Testing JavaScript:");
         karma.run({
             configFile: KARMA_CONFIG,
+            expectedBrowsers: EXPECTED_BROWSERS,
+            strict: !process.env.loose,
         }, complete, fail);
     }, { async: true });
 
